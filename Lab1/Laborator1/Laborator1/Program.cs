@@ -3,9 +3,9 @@ using System.Runtime.Intrinsics.X86;
 
 static void P1()
 {
-    int a = 2;
-    int b = 4;
-    int x;
+    int a = int.Parse(Console.ReadLine());
+    int b = int.Parse(Console.ReadLine());
+    int x; 
 
     x = -b / a;
     Console.WriteLine(x);
@@ -349,7 +349,7 @@ static bool P19()
     }
     while (temp != 0)
     {
-        if (temp % 10 != y && temp % 10 != x)
+        if (temp % 10 != x && temp % 10 != x)
         {
             return false;
         }
@@ -407,3 +407,17 @@ static void P21()
     Console.WriteLine($"Numarul la care te-ai gandit este: {st}");
 }
 
+
+void Palindrom()
+{
+    string line = Console.ReadLine();
+    char[] seps = { ' ', ';'};
+    string[] tokens = line.Split(seps, StringSplitOptions.RemoveEmptyEntries);
+   
+    foreach(string token in tokens)
+    {
+        Console.WriteLine($"{token}, {new string(token.Reverse().ToArray())}");
+    }
+}
+
+Palindrom();
