@@ -10,7 +10,7 @@ static void P1()
     x = -b / a;
     Console.WriteLine(x);
 }
-;
+
 
 static void P2()
 {
@@ -40,7 +40,7 @@ static void P2()
         Console.WriteLine($"Ecuatia are doua solutii reale: x1 = {x1} si x2 = {x2}");
     }
 }
-;
+
 
 static bool P3()
 {
